@@ -7,7 +7,7 @@ export default function Casa({ year, month, day, id }) {
 	</>
 }
 export async function getServerSideProps( { query } ) {
-	const { year, month, day, id } = query;
+	const { year, month, day, id } = query; 
 
 	return {
 		props: query,
