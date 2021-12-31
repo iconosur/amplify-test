@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import '../styles/Home.module.css'
 
+import Amplify from 'aws-amplify';
+import config from '../src/aws-exports';
+Amplify.configure({...config, ssr: true});
+
 export default function Home() {
   return (
     <div className="container">
