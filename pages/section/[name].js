@@ -1,18 +1,17 @@
-import Link from 'next/link';
 import Amplify from 'aws-amplify';
 import config from '../../src/aws-exports';
 Amplify.configure({...config, ssr: true});
 
-export default function Casa({path}) {
+export default function Casa({name}) {
 	return <>
-		<p>Seccion: {path}</p>
+		<p>Seccion: {name}</p>
 	</>
 }
 export async function getServerSideProps( { query } ) {
-	const { path } = query;
+	const { name } = query;
 	return {
 		props: {
-			path
+			name
 		},
 	}
 }
