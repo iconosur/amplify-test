@@ -6,7 +6,7 @@ Amplify.configure({...config, ssr: true});
 export default function Casa(props) {
 	console.log(props);
 	return <>
-		<p>id: ${props}</p>
+		<p>id</p>
 	</>
 }
 export async function getServerSideProps( { query } ) {
