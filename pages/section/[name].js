@@ -9,6 +9,7 @@ export default function Casa({name}) {
 }
 export async function getServerSideProps( { query } ) {
 	const { name } = query;
+	console.log(query)
 	return {
 		props: {
 			name
