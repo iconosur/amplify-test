@@ -8,6 +8,10 @@ const nextConfig = {
           source: "/category/:name*",
           destination: "/section",
         },
+        {
+          source: "/tag/:name*",
+          destination: "/section/[name].js",
+        },
       ],
     };
   },
